@@ -85,23 +85,25 @@
 	<section id="section6" class="cd-section">
 		<h2>Contact</h2>
 		<form action="/" method="post">
-			<div class="mb-1">
-				<label for="first-name" class="form-label">First Name</label>
-				<input type="text" id="first-name" class="form-control">
-			</div>
-			<div class="mb-2">
-				<label for="last-name" class="form-label">Last Name</label>
-				<input type="text" id="last-name" class="form-control">
+			<div class="row">
+				<div class="mb-1 col-sm-6">
+					<label for="first-name" class="form-label">First Name</label>
+					<input name="yourfname" type="text" id="first-name" required class="form-control">
+				</div>
+				<div class="mb-2 col-sm-6">
+					<label for="last-name" class="form-label">Last Name</label>
+					<input name="yourlname" type="text" id="last-name" required class="form-control">
+				</div>
 			</div>
 			<div class="mb-3">
 				<label for="email-address" class="form-label">Email address</label>
-				<input type="email" class="form-control" id="email-address" placeholder="name@example.com">
+				<input name="youremail" type="email" class="form-control" required id="email-address" placeholder="name@example.com">
 			</div>
 			<div class="mb-3">
 				<label for="message" class="form-label">Message</label>
-				<textarea class="form-control" id="message" placeholder="Write your message here" rows="3"></textarea>
+				<textarea name="yourmessage" class="form-control" id="message" placeholder="Write your message here" rows="3"></textarea>
 			</div>
-			<button class="btn btn-secondary" type="submit">Submit</button>
+			<input class="btn btn-secondary" value="Send" required type="submit">
 		</form>
 		
 	</section><!-- cd-section -->
