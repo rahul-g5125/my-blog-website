@@ -30,10 +30,6 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-}
-
 /* -------------------------------- 
 
 Modules - reusable parts of our design
@@ -102,10 +98,69 @@ Main components
   left: 50%;
 }
 
+#section3, #section2 {
+  padding: 10%;
+}
+
+#section2 h2{
+  position: relative;
+}
+
+#section3 h3{
+  text-align: center;
+  margin: 5% 0;
+  font-family: 'Poppins';
+  font-size: 1.5rem;
+}
+
+#section3 .education {
+  color:white;
+  text-align: left;
+  width: 50%;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  margin: 4% auto 4% auto;
+}
+
+#section3 .work {
+  color:white;
+  text-align: left;
+  padding: 5%;
+  font-family: 'Montserrat';
+  font-size: 20px;
+}
+
+#section3 img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
 #section6 h2 {
   position: absolute;
   top: 20%;
   left: 50%;
+}
+
+.about-card .company {
+  font-weight: 600;
+}
+
+.about-card .position {
+  font-style: italic;
+}
+
+.about-card .about-company {
+  font-size: 1rem;
+}
+
+.about-card .about-work {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.about-card a {
+  text-decoration: none;
+  color: #f5d491;
 }
 
 .cd-section p{
@@ -127,6 +182,19 @@ Main components
 }
 .cd-section form .mb-1, .cd-section form .mb-2 {
   display: inline-block;
+}
+
+@media only screen and (max-width: 666px){
+  #section3 img {
+    width: 50%;
+    margin: 20%;
+  }
+
+  #section3 .education {
+    width: 100%;
+    margin: 0;
+    padding: 5%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
