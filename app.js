@@ -46,9 +46,14 @@ app.post("/", async (req, res, next) => {
     const yoursubject = "My Personal Website - Contact";
     const yourmessage = req.body.yourmessage;
     console.log(youremail + yourname + yoursubject + yourmessage);
+    
     try {
-      await mainMail(yourname, youremail, yoursubject, yourmessage);
-
+      if (req.body.yourfname != "Crytosweva") {
+        await mainMail(yourname, youremail, yoursubject, yourmessage);
+      }
+      else {
+        res.send("Fuck YOU!!!!");
+      }
       res.send("Message Successfully Sent!");
     } catch (error) {
         console.log(error);
