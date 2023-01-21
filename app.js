@@ -48,7 +48,7 @@ app.post("/", async (req, res, next) => {
     console.log(youremail + yourname + yoursubject + yourmessage);
     
     try {
-      if (req.body.yourfname != "Crytosweva") {
+      if (req.body.yourfname != "Crytosweva" && req.body.yourfname != "sweva" ) {
         await mainMail(yourname, youremail, yoursubject, yourmessage);
       }
       else {
