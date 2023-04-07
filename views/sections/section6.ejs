@@ -1,0 +1,23 @@
+<h2>Contact</h2>
+<form action="/" method="post" id="contact-form">
+    <div class="row">
+        <div class="mb-1 col-sm-6">
+            <label for="first-name" class="form-label">First Name</label>
+            <input name="yourfname" type="text" id="first-name" required class="form-control">
+        </div>
+        <div class="mb-2 col-sm-6">
+            <label for="last-name" class="form-label">Last Name</label>
+            <input name="yourlname" type="text" id="last-name" required class="form-control">
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="email-address" class="form-label">Email address</label>
+        <input name="youremail" type="email" class="form-control" required id="email-address" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea name="yourmessage" class="form-control" id="message" placeholder="Write your message here" rows="3"></textarea>
+    </div>
+    <div name="captcha" required class="g-recaptcha" data-sitekey="6Lcr1UwlAAAAABsSBGBZLztlKgGNcPV70JnKNz6c"></div>
+    <button class="g-recaptcha btn btn-primary" onclick=grecaptcha.execute() >Submit</button>
+</form>

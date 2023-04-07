@@ -1,14 +1,15 @@
 const express = require('express');
 const ejs = require('ejs');
 require("dotenv").config();
-const PORT = process.env.PORT || 3030;
 const nodeMailer = require('nodemailer');
 const path = require("path");
 const bodyParser = require('body-parser');
+const request = require('request');
 
 app = express()
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 app.set('view engine', 'ejs');
 app.get("/", function(req, res){
@@ -46,7 +47,7 @@ app.post("/", async (req, res, next) => {
     const yoursubject = "My Personal Website - Contact";
     const yourmessage = req.body.yourmessage;
     console.log(youremail + yourname + yoursubject + yourmessage);
-    
+
     try {
       if (req.body.yourfname != "Crytosweva" && req.body.yourfname != "sweva" ) {
         await mainMail(yourname, youremail, yoursubject, yourmessage);
@@ -61,6 +62,6 @@ app.post("/", async (req, res, next) => {
     }
 });
 
-app.listen(PORT, function(){
-    console.log("Server has started on port " + PORT);
+app.listen(3000, function(){
+    console.log("Server has started on port " + 3000);
 });
